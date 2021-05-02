@@ -138,10 +138,6 @@ button:hover, button:focus, .button:hover, .button:focus {
   .Selector .grid__item:last-child {
     grid-column: 3/3;
   }
-  .Selector .about-me {
-    max-width: 900px;
-    margin: 0 auto;
-  }
 }
 
 @keyframes color-change {
@@ -183,6 +179,16 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 .message-me {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-me {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.project {
   max-width: 900px;
   margin: 0 auto;
 }
