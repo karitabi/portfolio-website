@@ -14,7 +14,9 @@ Secondary button background color(orange): #357b70;
   --primary-font-weight: 700;
   --primary-background-color:#e4f3f5;
   --primary-button-background-color: #357b70;
-  --Secondary-button-background-color: #e29578;
+  --secondary-button-background-color: #e29578;
+  --secondary-font-size: 15px;
+  --secondary-font-weight:550;
 }
 
 button, .button {
@@ -31,7 +33,7 @@ body {
   line-height: 1.9;
 }
 
-h1, h2, h3 {
+h1, h2 {
   font-size: var(--primary-font-size);
   font-weight: var(--primary-font-weight);
 }
@@ -119,23 +121,25 @@ button:hover, button:focus, .button:hover, .button:focus {
 .grid__item {
   display: inline-block;
   width: 33%;
+  font-size: var(--secondary-font-size);
+  font-weight: var(--secondary-font-weight);
 }
 
 @supports (display: grid) {
-  .Selector .grid {
+   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-gap: 20px 80px;
-    margin: 80px;
+    grid-gap: 20px 20px;
+    margin: 5px;
     text-align: center;
   }
-  .Selector .grid__item {
+   .grid__item {
     background-color: #cfe6e7;
     width: auto;
     min-height: auto;
     margin: 0;
   }
-  .Selector .grid__item:last-child {
+   .grid__item:last-child {
     grid-column: 3/3;
   }
 }
