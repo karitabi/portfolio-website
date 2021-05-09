@@ -39,8 +39,8 @@ button, .button {
   }
   
   h2 {
-	font-size: 25px;
-	font-weight: 700;
+	font-size: 20px;
+	font-weight: 500;
   }
   
   a {
@@ -77,7 +77,8 @@ button, .button {
 	border-radius: 8px;
 	border-bottom: 2px solid rgba(0, 0, 0, 0.3);
   }
-  button:hover, button:focus, .button:hover, .button:focus {
+
+  button:hover, button:focus, .button:hover, .button:focus,{
 	cursor: pointer;
 	opacity: 0.5;
   }
@@ -171,86 +172,86 @@ button, .button {
 	}
   }
   
-  @-webkit-keyframes color-change {
+  @-webkit-keyframes color-change{
 	0% {
-	  fill: #edc655;
+		fill :#edc655;
 	}
 	50% {
-	  fill: #f88151;
+		fill: #fcffad;
 	}
 	100% {
-	  fill: #f64013;
+		fill: #f76414;
 	}
-  }
-  
-  @keyframes color-change {
+}
+@keyframes color-change{
 	0% {
-	  fill: #edc655;
+		fill :#edc655;
 	}
 	50% {
-	  fill: #f88151;
+		fill: #fcffad;
 	}
 	100% {
-	  fill: #f64013;
+		fill: #f76414;
 	}
-  }
-  
-  .selector .sun {
+}
+.sun{
 	-webkit-animation: 3s color-change infinite alternate linear;
-			animation: 3s color-change infinite alternate linear;
-  }
-  @-webkit-keyframes cloud-move {
+			animation: 3s color-change infinite alternate linear;  
+}
+
+@-webkit-keyframes cloud-move{
 	from {
-	  -webkit-transform: translate(0, 50px);
-			  transform: translate(0, 50px);
+		-webkit-transform:translate(0, 50px);
+				transform:translate(0, 50px);
 	}
 	to {
-	  -webkit-transform: translate(200px, 50px);
-			  transform: translate(200px, 50px);
+		-webkit-transform:translate(200px, 50px);
+				transform:translate(200px, 50px);
 	}
-  }
-  
-  @keyframes cloud-move {
+}
+
+@keyframes cloud-move{
 	from {
-	  -webkit-transform: translate(0, 50px);
-			  transform: translate(0, 50px);
+		-webkit-transform:translate(0, 50px);
+				transform:translate(0, 50px);
 	}
 	to {
-	  -webkit-transform: translate(200px, 50px);
-			  transform: translate(200px, 50px);
+		-webkit-transform:translate(200px, 50px);
+				transform:translate(200px, 50px);
 	}
-  }
-	.selector .cloud-front {
-	  -webkit-animation: 10s cloud-move infinite alternate linear;
-			  animation: 10s cloud-move infinite alternate linear;
-	}
-	@-webkit-keyframes cloud-move-reverse {
-	  from {
+}
+.cloud-front{
+	-webkit-animation: 25s cloud-move infinite alternate linear;
+			animation: 25s cloud-move infinite alternate linear;
+}
+@-webkit-keyframes cloud-move-reverse{
+	from {
 		-webkit-transform: translate(446px, 48px);
 				transform: translate(446px, 48px);
-	  }
-	  to {
-		-webkit-transform: translate(300px, 48px);
-				transform: translate(300px, 48px);
-	  }
 	}
-	
-	@keyframes cloud-move-reverse {
-	  from {
+	to {
+		  -webkit-transform: translate(350px, 48px);
+				  transform: translate(350px, 48px);
+	}
+}
+@keyframes cloud-move-reverse{
+	from {
 		-webkit-transform: translate(446px, 48px);
 				transform: translate(446px, 48px);
-	  }
-	  to {
-		-webkit-transform: translate(300px, 48px);
-				transform: translate(300px, 48px);
-	  }
 	}
-  
-	.selector .cloud-back {
-	  -webkit-animation: 20s cloud-move-reverse infinite alternate linear;
-			  animation: 20s cloud-move-reverse infinite alternate linear;
+	to {
+		  -webkit-transform: translate(350px, 48px);
+				  transform: translate(350px, 48px);
 	}
-  
+}
+.cloud-back{
+	-webkit-animation: 25s cloud-move-reverse infinite alternate linear;
+			animation: 25s cloud-move-reverse infinite alternate linear;
+}
+
+
+
+
   .message-me {
 	max-width: 900px;
 	margin: 0 auto;

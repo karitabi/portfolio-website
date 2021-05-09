@@ -1,4 +1,10 @@
 /*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+/*
 colors used 
 Primary Color (baby blue): #e4f3f5;
 link color (light green): #5D958C;
@@ -9,6 +15,7 @@ Primary button background color: #357b70;
 Secondary button text color (Dark Gray): #2b2b2b;
 Secondary button background color(orange): #357b70;
 */
+
 :root {
   --primary-font-size: 25px;
   --primary-font-weight: 700;
@@ -22,6 +29,8 @@ Secondary button background color(orange): #357b70;
 button, .button {
   display: inline-block;
   font-family: inherit;
+  -webkit-transition-duration: 0.2s;
+  -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
 
@@ -33,27 +42,35 @@ body {
   line-height: 1.9;
 }
 
-h1, h2 {
+h1 {
   font-size: var(--primary-font-size);
   font-weight: var(--primary-font-weight);
+}
+
+h2 {
+  font-size: 25px;
+  font-weight: 700;
 }
 
 a {
   color: #5D958C;
 }
+
 a:visited {
   /*visted link*/
   color: #05676e;
 }
+
 a:hover, a:focus {
   text-decoration: none;
 }
+
 a:active {
   /*selected link*/
   color: #489c79;
 }
 
-button, .button {
+button {
   border: none;
   background-color: var(--primary-button-background-color);
   color: white;
@@ -62,6 +79,17 @@ button, .button {
   border-radius: 8px;
   border-bottom: 2px solid rgba(0, 0, 0, 0.3);
 }
+
+.button {
+  border: none;
+  background-color: #357b70;
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+  border-radius: 8px;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.3);
+}
+
 button:hover, button:focus, .button:hover, .button:focus {
   cursor: pointer;
   opacity: 0.5;
@@ -74,7 +102,12 @@ button:hover, button:focus, .button:hover, .button:focus {
 
 .page-footer {
   clear: both;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   text-align: center;
 }
@@ -83,28 +116,35 @@ button:hover, button:focus, .button:hover, .button:focus {
   max-width: 900px;
   margin: 0 auto;
 }
+
 .profile__portrait {
   float: left;
   width: 250px;
   margin-right: 40px;
   border-radius: 50%;
 }
+
 .contact {
   text-align: left;
 }
-#contact-form{
-  width: 80%;
-}
 
 .page-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
   width: 95%;
   padding: 10px;
 }
+
 .page-header__item {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 1 200px;
   flex: 0 1 200px;
 }
+
 .page-header__item:last-child {
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   text-align: right;
 }
@@ -112,10 +152,12 @@ button:hover, button:focus, .button:hover, .button:focus {
 .navigation-list {
   list-style-type: none;
 }
+
 .navigation-list li {
   display: inline-block;
   margin-left: 15px;
 }
+
 .navigation-list__item--active {
   text-decoration: none;
 }
@@ -128,24 +170,46 @@ button:hover, button:focus, .button:hover, .button:focus {
 }
 
 @supports (display: grid) {
-   .grid {
+  .grid {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 20px 20px;
     margin: 5px;
     text-align: center;
   }
-   .grid__item {
+
+  .grid__item {
     background-color: #cfe6e7;
     width: auto;
     min-height: auto;
     margin: 0;
   }
-   .grid__item:last-child {
+
+  .grid__item:last-child {
+    -ms-grid-column: 3;
     grid-column: 3/3;
   }
 }
+.message-me {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
 
+.about-me {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.project {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+}
 @keyframes color-change {
   0% {
     fill: #edc655;
@@ -157,9 +221,10 @@ button:hover, button:focus, .button:hover, .button:focus {
     fill: #f76414;
   }
 }
-.selector .sun {
+.sun {
   animation: 3s color-change infinite alternate linear;
 }
+
 @keyframes cloud-move {
   from {
     transform: translate(0, 50px);
@@ -168,49 +233,33 @@ button:hover, button:focus, .button:hover, .button:focus {
     transform: translate(200px, 50px);
   }
 }
-.selector .cloud-front {
-  animation: 10s cloud-move infinite alternate linear;
+.cloud-front {
+  animation: 25s cloud-move infinite alternate linear;
 }
+
 @keyframes cloud-move-reverse {
   from {
     transform: translate(446px, 48px);
   }
   to {
-    transform: translate(300px, 48px);
+    transform: translate(350px, 48px);
   }
 }
-
 .cloud-back {
-  animation: 20s cloud-move-reverse infinite alternate linear;
+  animation: 25s cloud-move-reverse infinite alternate linear;
 }
 
-.message-me {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.about-me {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.project {
-  max-width: 900px;
-  margin: 0 auto;
-}
-
-.text-style{
-  margin: 0 auto;
-  text-align: center;
-}
 
 @media all and (max-width: 500px) {
   .selector .grid {
+    -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
 }
+
 @media all and (max-width: 500px) and (min-width: 500px) and (max-width: 700px) {
   .selector .grid {
+    -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
   }
 }
