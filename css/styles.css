@@ -34,12 +34,12 @@ button, .button {
   transition-duration: 0.2s;
   text-align: center;
   margin: 0 auto;
-  /*padding: 10px;
-  width: 250px;*/
+  grid-column-start: 1;
+  grid-column-end: 4;
 }
 
 /*#contact__button {
-  border: none;
+/*border: none;
   display: flex;
   font-family: inherit;
   -webkit-transition-duration: 0.2s;
